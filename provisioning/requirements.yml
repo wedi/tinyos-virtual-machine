@@ -1,0 +1,15 @@
+---
+
+- src: jnv.unattended-upgrades
+  version: "v1.3.0"
+
+- src: https://github.com/sunscrapers/ansible-role-python
+  version: "585186db1b7498ce4b27b314c69a70cb2367e125"
+  name: sunscrapers.python
+
+- src: wedi.tinyos
+
+- src: yatesr.timezone
+  version: "1.0.0"
+
+...

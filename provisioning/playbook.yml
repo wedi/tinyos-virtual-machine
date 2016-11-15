@@ -1,0 +1,23 @@
+---
+
+- hosts: all
+  become: true
+  vars_files:
+    - vars/main.yml
+
+  pre_tasks:
+    - include: tasks/system_setup.yml
+
+  roles:
+    - yatesr.timezone
+    - sunscrapers.python
+    - wedi.tinyos
+    - jnv.unattended-upgrades
+
+  tasks:
+    # unattendes upgrades get disabled in the bento base box
+    # https://github.com/chef/bento/blob/master/scripts/ubuntu/update.sh#L31
+    - name: Reenable periodic activities of apt
+      file: name=/etc/apt/apt.conf.d/10disable-periodic state=absent
+
+...

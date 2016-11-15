@@ -1,0 +1,26 @@
+---
+
+system_locale: "de_DE.UTF-8"
+
+# vars for yatesr.timezone
+timezone: 'Europe/Berlin'
+
+# vars for jnv.unattended-upgrades
+unattended_minimal_steps: true
+unattended_remove_unused_dependencies: true
+
+# vars for sunscrapers.python
+python_apt_packages_2:
+  - python
+  - python-pip
+
+python_apt_packages_3:
+  - python3
+  - python3-pip
+
+python_update_pip: yes
+python_update_setuptools: yes
+python_install_virtualenv: yes
+python_pip_packages: []
+
+...

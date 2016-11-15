@@ -1,0 +1,8 @@
+# Prevent all dynamically created files from being submitted to the repo.
+
+# Vagrant
+.vagrant
+*.retry
+
+# galaxy roles
+provisioning/roles/*/

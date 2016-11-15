@@ -1,0 +1,9 @@
+---
+
+- name: Make sure the {{ system_locale }} locale is available
+  locale_gen: name={{ system_locale }} state=present
+
+- name: run dist upgrade
+  apt: upgrade=dist autoremove=yes update_cache=yes cache_valid_time=600
+
+...
